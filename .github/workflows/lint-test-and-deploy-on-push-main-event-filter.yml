@@ -1,5 +1,12 @@
-name : Lint Test And Deploy Project On Push
+name : Lint Test And Deploy Project On Push Event Filter
 on: [ push,workflow_dispatch ]
+  push:
+    branches:
+      - main
+      - 'dev-*'       # dev-new dev-this-is-new
+      - 'release/**'  # release/new release/new/button
+    paths:
+      - '.github/workflows/*'
 jobs:
   mytest:
     runs-on: ubuntu-latest

@@ -1,5 +1,9 @@
-name : Lint Test And Deploy Project On Push
-on: [ push,workflow_dispatch ]
+name : Lint Test And Deploy Project On Pull Open
+on: 
+  pull_request:
+    types:
+      - opened
+  workflow_dispatch:
 jobs:
   mytest:
     runs-on: ubuntu-latest
