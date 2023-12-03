@@ -1,5 +1,5 @@
 name : Lint Test And Deploy Project On Push Event Filter
-on: [ push,workflow_dispatch ]
+on:
   push:
     branches:
       - main
